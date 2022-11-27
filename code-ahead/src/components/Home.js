@@ -14,7 +14,7 @@ export default class Home extends Component {
       <div id="home-wrapper">
         <div className="home">
           <a href="/">
-            <img src="/logo.jpg" alt="code_along logo" />
+            <img src="/logo.png" alt="code_along logo" />
           </a>
 
           <form onSubmit={this.joinRoom}>

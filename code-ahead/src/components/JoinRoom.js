@@ -43,9 +43,10 @@ class JoinRoom extends Component {
         userName,
       },
     });
+    console.log("changedCode1", socket);
 
     socket.on("changedCode", (args) => {
-      // console.log("changedCode", args);
+      console.log("changedCode", args);
 
       const newState = {};
       if (args.lang === this.state.language) newState.code = args.code;
@@ -109,7 +110,7 @@ class JoinRoom extends Component {
     });
 
     socket.on("roomState", (args) => {
-      // console.log("roomState", args);
+      console.log("roomState", args);
       this.setState((prevState) => {
         return {
           ...prevState,
@@ -208,7 +209,7 @@ class JoinRoom extends Component {
           <div id="join-room-wrapper">
             <nav>
               <a href="/">
-                <img src="/logo.jpg" alt="code_along logo" itemType="jpeg" />
+                <img src="/logo.png" alt="code_along logo" itemType="jpeg" />
               </a>
               <RoomId roomId={this.state.roomId} />
             </nav>
